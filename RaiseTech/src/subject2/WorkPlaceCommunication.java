@@ -9,7 +9,7 @@ public class WorkPlaceCommunication implements Communication {
 	//helloと受けたらhelloを返すメソッドgreetを実装
 	@Override
 	public String greet(String greetingWord) {
-		if (greetingWord == "Hello") {
+		if (greetingWord.equals("Hello")) {
 			return "Hello";
 		} else {
 			return "・・・";
@@ -28,13 +28,13 @@ public class WorkPlaceCommunication implements Communication {
 	//相手によって挨拶を変えるメソッド
 	public String greetSomeone(String person) throws yourHeadIsTooHighException {
 
-		if (person == "CEO") {
+		if (person.equals("CEO")) {
 			throw new yourHeadIsTooHighException("例外発生！頭が高いです");
 		}
 
-		if (person == "coworker") {
+		if (person.equals("coworker")) {
 			return "hi!";
-		} else if (person == "boss") {
+		} else if (person.equals("boss")) {
 			return "Hello,boss!";
 		} else {
 			return "hello";
